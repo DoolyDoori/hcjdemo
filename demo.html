@@ -1,0 +1,64 @@
+<!-- !+ Enter 시 HTML기본 양식 나옴  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Programming Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="site.html">Site</a>
+          </li>
+          <li>
+            <a href="introduce.html">Introduce</a>
+          </li>
+          <li>
+            <a href="demo.html">Demo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--메인 섹션-->
+    <section class="main">
+      <div class="container_demo">
+        <h1 style="font-weight: 900">DEMO</h1>
+        <h2>배경색 바꾸기 실습:</h2>
+        <p>
+          <button onclick="pink()">Pink</button>
+          <button onclick="lightblue()">Lightblue</button>
+          <button onclick="yellow()">Yellow</button>
+          <button onclick="reset()">Reset</button>
+          <br />
+        </p>
+        <br />
+        <h1>각 요소 대표이미지와 설명(마우스를 올려보세요!):</h1>
+        <br />
+        <p>
+          <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button>
+          <button onmouseover="showcss()" onmouseout="hide()">CSS3</button>
+          <button onmouseover="showjs()" onmouseout="hide()">Javascript</button>
+        </p>
+        <hr />
+        <!-- hr -> 가로 수평선 넣기  -->
+        <br />
+        <div>
+          <img id="fig" height="200px" />
+          <p id="desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

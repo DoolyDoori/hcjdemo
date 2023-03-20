@@ -1,0 +1,96 @@
+<!-- !+ Enter 시 HTML기본 양식 나옴  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Programming Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="site.html">Site</a>
+          </li>
+          <li>
+            <a href="introduce.html">Introduce</a>
+          </li>
+          <li>
+            <a href="demo.html">Demo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--메인 섹션-->
+    <section class="main">
+      <div class="container_index">
+        <h1>[웹프로그래밍 예제 실습]</h1><br><br>
+
+        <h1 style="text-align: center";>What time is it now?:</h1>
+
+        <div style="text-align: center;">
+          <span id="clock" style="color:gray; font-size: 100px;">clock</span>
+          <span id="apm" style="color:gray; font-size: 50px;"  >ampm</span>
+      </div>
+      
+  <!-- 자바스크립트를 활용한 실시간 시계 -->
+      <script>
+          var Target = document.getElementById("clock");
+          var Target_apm = document.getElementById("apm");
+          function clock() {
+              var time = new Date(); //현재 시간 가져오기 
+              var hours = time.getHours();
+              var minutes = time.getMinutes();
+              var seconds = time.getSeconds(); 
+              //시 분 초 추출하기
+              var AmPm ="AM";
+              if(hours > 12){   
+                  var AmPm ="PM";
+                  hours %= 12; // 12시간 형식으로 변환, AM/PM 출력 조건문
+              }
+  
+              Target.innerText = 
+              `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+  
+              Target_apm.innerText = `${AmPm}`; //-> AM/PM 구분,삼항연산자 (만약 시,분,초가 10보다 작으면 앞에 0을 붙여라)
+  
+          }
+          clock();// 시계 실행
+          setInterval(clock, 1000); // 1초마다 실행(자동 업데이트)
+      </script>
+<!-- 출처 ChatGPT, https://dalseobi.tistory.com/3 -->
+
+        <h1>👇마우스를 올려보세요! 👇</h1><br>
+        <div class="HTML">
+          <a href="https://www.w3schools.com/html/default.asp">
+            <span class="thick">HTML</span>
+          </a>
+          
+        </div>
+        <div class="Css">
+          <a href="https://www.w3schools.com/css/default.asp">
+            <span class="thick">CSS</span>
+          </a>
+          
+        </div>
+        <div class="JAVASCRIPT">
+          <a href="https://www.w3schools.com/js/default.asp">
+            <span class="thick">JAVASCRIPT</span>
+          </a>
+          
+        </div>
+
+
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

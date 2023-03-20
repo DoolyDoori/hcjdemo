@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: beige;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* introduce 페이지의 컨테이너를 따로 설정 */
+.container_introduce {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* 왼쪽과 오른쪽의 마진을 자동을 설정, 텍스트를 가운데 맞춤으로 해서 
+  전체페이지의 가운데에 글씨가 올수 있도록 조정 */
+}
+
+/* index 페이지의 컨테이너를 따로 설정 */
+.container_index {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: black;
+}
+
+/* demo 페이지의 컨테이너를 따로 설정 */
+.container_demo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* 왼쪽과 오른쪽의 마진을 자동을 설정, 텍스트를 가운데 맞춤으로 해서 
+  전체페이지의 가운데에 글씨가 올수 있도록 조정 */
+}
+/* help 페이지의 컨테이너를 따로 설정 */
+.container_help {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.main {
+  line-height: 2.5;
+}
+/* nav bar -> 맨 위 메뉴바 스타일 성정 */
+.navbar {
+  background-color: black;
+  color: #fff;
+  height: 60px;
+}
+
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar .logo {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff dashed;
+  color: #aaa;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px 10px;
+  font-size: large;
+  font-weight: bold;
+  background-color: lightgrey;
+  border-radius: 10px;
+  border-width: 0px;
+  /* 테두리 둥글게, 선 있게 없게  */
+}
+
+button:hover {
+  color: red;
+  background-color: yellow;
+}
+
+.thick {
+  font-weight: 900;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+
+/* index.html 속 마우스 오버요소 */
+/* linktwo- 마우스 오버시 색상변경  */
+.HTML a:hover {
+  color: #fc7b02e1;
+}
+/* 글씨 아래 줄 */
+.HTML a:before {
+  content: '';
+  /* border-bottom: solid 3px  #fc7b02e1; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  opacity: 0;
+}
+
+.HTML a:hover:before {
+  opacity: 1;
+}
+
+.HTML a,
+.HTML a:before {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* CSS- 마우스 오버시 색상변경  */
+.Css a:hover {
+  color: skyblue;
+}
+/* 글씨 아래 줄 */
+.Css a:before {
+  content: '';
+  /* border-bottom: solid 3px #fc7b02e1; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  opacity: 0;
+}
+
+.Css a:hover:before {
+  opacity: 1;
+}
+
+.Css a,
+.Css a:before {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* JAVASCRIPT- 마우스 오버시 색상변경  */
+.JAVASCRIPT a:hover {
+  color: yellow;
+}
+/* 글씨 아래 줄 */
+.JAVASCRIPT a:before {
+  content: '';
+  /* border-bottom: solid 3px #fc7b02e1; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  opacity: 0;
+}
+
+.JAVASCRIPT a:hover:before {
+  opacity: 1;
+}
+
+.JAVASCRIPT a,
+.JAVASCRIPT a:before {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* 텍스트 마우스 오버시 살짝강조 */
+.JBU a:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  color: #800020;
+}
+
+.JBU a {
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.W3S a:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  color: green;
+}
+
+.W3S a {
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+/* 이미지박스 위에 글씨 오버링, 박스 */
+.box-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border: 7px solid beige;
+}
+
+.box img {
+  width: 100%;
+}
+/* 오버되는 안쪽 박스, 글씨 설정 */
+.box .info {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+.box:hover .info {
+  opacity: 1;
+}
+.box .info h3 {
+  font-size: 24px;
+  padding-bottom: 0.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.box .info p {
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+/* 출처
+
+글씨 오버 효과 : https://codepen.io/butsuri/pen/pomNVg?limit=all&page=59&q=animation
+사진 위에 글씨 오버:  https://wsss.tistory.com/670
+
+
+
+*/
